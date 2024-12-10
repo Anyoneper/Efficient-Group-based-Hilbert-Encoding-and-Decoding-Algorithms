@@ -21,7 +21,7 @@ void EN(int k) {
 		{
 			for (int y = 0; y < (1 << k); y++)
 			{
-                resKey = 0;
+                		resKey = 0;
 				nType = i;	
 				for (int j = k - 1; j >= 0; j--)//K times
 				{
@@ -43,19 +43,19 @@ void DE(int k) {
 	for (char i = 0; i < 4; i++)//four types
 	{
 		for (int H_value = 0; H_value < (1 << (k * 2)); H_value++)//(1 << (k * 2))values
-        {      
+        	{      
 			nType = i;
 			Lat = 0, Lon = 0;
-            for (int j = k - 1; j >= 0; j--)//K times
-            {
+            		for (int j = k - 1; j >= 0; j--)//K times
+            		{
 				bitsZ = getTwo(H_value, (2 * j + 1));
 				posKey = HCM[nType][bitsZ];
 				Lat = (Lat << 1) | (posKey & 0x1);//y
 				Lon = (Lon << 1) | (posKey >> 1 & 0x1);//x
 				nType = HSM[nType][bitsZ];
-            }
+            		}
 			printf("type:%u,\t H_value:%u,\t H_X:%u,\t H_Y:%u,\tHSM:%u\n",i, H_value, Lon, Lat, nType);
-        }
+        	}
 	}
 }
 
