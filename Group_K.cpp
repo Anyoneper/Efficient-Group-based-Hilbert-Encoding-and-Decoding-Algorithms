@@ -11,8 +11,8 @@ char HCM[4][4] = { 0,1,3,2,0,2,3,1,3,2,0,1,3,1,0,2 };
 //the mappings from L1-code to its Ln-state
 char HSM[4][4] = { 1,0,0,3,0,1,1,2,3,2,2,1,2,3,3,0 };
 
-// CHM_k AND CSM_K
-void EN(int k) {
+// This function is used to get the CHM_k and CSM_K for different K orders, where K can be custom modified.
+void EN_K(int k) {
 	int resKey = 0 , max = (1 << k);
 	unsigned bitX = 0, bitY = 0;
 	char nType = 0;	
@@ -37,8 +37,8 @@ void EN(int k) {
 	}
 }
 
-//HCM_K AND HSM_K
-void DE(int k) {
+//// This function is used to get the HCM_K and HSM_K for different K orders, where K can be custom modified.
+void DE_K(int k) {
 	char nType = 0;
 	int posKey = 0 , max = (1 << (k * 2));
 	unsigned bitsZ = 0 , Lat, Lon ;
@@ -65,7 +65,7 @@ int main()
 {
 	//YOU CAN CHANGE THE K VALUE
 	// ENCODE AND DECODE
-	//EN(K);
-	//DE(K);
+	//EN_K(K);
+	//DE_K(K);
 	 return 0;
 }
