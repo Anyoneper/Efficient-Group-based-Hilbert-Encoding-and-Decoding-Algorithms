@@ -11,11 +11,11 @@ char HCM[4][4] = { 0,1,3,2,0,2,3,1,3,2,0,1,3,1,0,2 };
 //the mappings from L1-code to its Ln-state
 char HSM[4][4] = { 1,0,0,3,0,1,1,2,3,2,2,1,2,3,3,0 };
 
+// CHM_k AND CSM_K
 void EN(int k) {
-	int resKey = 0;
+	int resKey = 0 , max = (1 << k);
 	unsigned bitX = 0, bitY = 0;
 	char nType = 0;	
-	int max = (1 << k);
 	for (char i = 0; i < 4; i++)//four types
 	{
 		for (int x = 0; x < max; x++)
@@ -37,6 +37,7 @@ void EN(int k) {
 	}
 }
 
+//HCM_K AND HSM_K
 void DE(int k) {
 	char nType = 0;
 	int posKey = 0 , max = (1 << (k * 2));
