@@ -15,11 +15,12 @@ void EN(int k) {
 	int resKey = 0;
 	unsigned bitX = 0, bitY = 0;
 	char nType = 0;	
+	int max = (1 << k);
 	for (char i = 0; i < 4; i++)//four types
 	{
-		for (int x = 0; x < (1 << k); x++)
+		for (int x = 0; x < max; x++)
 		{
-			for (int y = 0; y < (1 << k); y++)
+			for (int y = 0; y < max; y++)
 			{
                 		resKey = 0;
 				nType = i;	
@@ -38,11 +39,11 @@ void EN(int k) {
 
 void DE(int k) {
 	char nType = 0;
-	int posKey = 0;
+	int posKey = 0 , max = (1 << (k * 2));
 	unsigned bitsZ = 0 , Lat, Lon ;
 	for (char i = 0; i < 4; i++)//four types
 	{
-		for (int H_value = 0; H_value < (1 << (k * 2)); H_value++)//(1 << (k * 2))values
+		for (int H_value = 0; H_value < max; H_value++)//(1 << (k * 2))values
         	{      
 			nType = i;
 			Lat = 0, Lon = 0;
