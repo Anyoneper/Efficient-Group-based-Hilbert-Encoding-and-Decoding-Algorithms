@@ -6,9 +6,9 @@ This repositary contains four files:CHM_8.bin, CSM_8.bin,HCM_8.bin and HSM_8.bin
 Also Group_K.cpp provides the generation of the kth order state views CHM_k, CSM_k, HCM_k, and HSM_k, which can be opened and executed separately.
 
 Opening and executing FVFG.cpp can be done by following steps:
-1, first create a new project;
+1, First create a new project;
 2. Add the FVFG.cpp file to that project;
-3, open the local address where the FVFG.cpp file is stored;
+3, Open the local address where the FVFG.cpp file is stored;
 4. Copy the four files CHM_8.bin, CSM_8.bin, HCM_8.bin and HSM_8.bin to the local address where the FVFG.cpp file is stored;
 5. Execute the FVFG.cpp file in the compiler;
 
